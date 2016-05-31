@@ -30,7 +30,7 @@ class GenreTableViewController: UITableViewController {
         genreID = genreIDFromItemTag(tabBarItem.tag)
         
         // create and set logout button
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Reply, target: self, action: #selector(logout))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Reply, target: self, action: Selector("logout"))
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -35,10 +35,10 @@ class LoginViewController: UIViewController {
         
         configureUI()
         
-        subscribeToNotification(UIKeyboardWillShowNotification, selector: #selector(keyboardWillShow))
-        subscribeToNotification(UIKeyboardWillHideNotification, selector: #selector(keyboardWillHide))
-        subscribeToNotification(UIKeyboardDidShowNotification, selector: #selector(keyboardDidShow))
-        subscribeToNotification(UIKeyboardDidHideNotification, selector: #selector(keyboardDidHide))
+        subscribeToNotification(UIKeyboardWillShowNotification, selector: Selector("keyboardWillShow:"))
+        subscribeToNotification(UIKeyboardWillHideNotification, selector: Selector("keyboardWillHide:"))
+        subscribeToNotification(UIKeyboardDidShowNotification, selector: Selector("keyboardDidShow:"))
+        subscribeToNotification(UIKeyboardDidHideNotification, selector: Selector("keyboardDidHide:"))
     }
     
     override func viewWillDisappear(animated: Bool) {
